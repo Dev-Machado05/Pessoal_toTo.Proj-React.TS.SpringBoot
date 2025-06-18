@@ -1,0 +1,49 @@
+@use "../../../../variables.scss" as *;
+
+.dinamic-navBar_Container, .fixed-navBar_Container {
+    width: 100vw;
+    height: 10vh;
+    background-color: $NavBar_Background;
+    min-height: 50px;
+    max-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        color: $gray;
+        font-weight: 500;
+        font-family: $NavBar_Font;
+        text-decoration: none;
+        font-size: 1.2rem;
+        
+        @media only screen and (max-width: $Desktop_Width)  {
+            font-size: 0.85rem;
+        }
+    }
+    
+    nav {
+        display: flex;
+        gap: 20px;
+    
+        @media only screen and (max-width: $Desktop_Width)  {
+            gap: 10px;
+        }
+    }
+    
+    .actualPage {
+        color: $white;
+        font-weight: 700;
+    }
+}
+
+.dinamic-navBar_Container {
+    position: absolute;
+}
+
+
+// cursor :hover
+
+.navBar_Container a:hover {
+    cursor: pointer;
+}

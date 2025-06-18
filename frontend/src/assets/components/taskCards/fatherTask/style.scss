@@ -1,0 +1,94 @@
+@use "../../../../variables.scss" as *;
+
+
+
+.fatherTaskContainer {
+    min-height: 3vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    h3, p, span {
+        min-width: 145px;
+        max-width: 160px;
+    }
+}
+
+.fatherTask_open {
+    border-radius: 7px 7px 10px 10px;
+
+    .taskHeader {
+        border-radius: 7px 7px 0px 0px;
+    }
+    
+}
+
+.fatherTask_close {
+    border-radius: 7px;
+    
+    .taskHeader {
+        border-radius: 7px;
+    }
+}
+
+
+
+.taskHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: -webkit-fill-available;
+    padding: 2vh 1.5vw;
+    background-color: $fatherTask-Header_Background;
+    
+    h3, p {
+        font-weight: $taskTitle_weight;
+        color: $white;
+    }
+}
+
+.taskHeader:hover {
+    cursor: pointer;
+}
+
+.sonContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 10px 10px;
+    background-color: $gray;
+    box-sizing: border-box;
+    border: solid 3px $gray;
+    border-top: none;
+    width: 100%;
+    gap: 7px;
+    padding-top: 8px;
+    
+    
+    div { 
+        display: flex;
+        justify-content: space-between;        
+        border-radius: 10px 10px 10px 10px;
+        background-color: $fatherTask-subTasks_Background;
+        padding: 2vh 1.5vw;
+    }
+
+    div:hover {
+        cursor: pointer;
+    }
+
+    span {
+        color: $black;
+    }
+
+}
+
+.subtask-FinalDate, .task-FinalDate {
+    text-align: center;
+}
+
+.subtask-Status, .task-Progress {
+    text-align: right;
+    min-width: 75px;
+}

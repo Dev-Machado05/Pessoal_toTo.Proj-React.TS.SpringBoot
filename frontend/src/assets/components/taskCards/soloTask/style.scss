@@ -1,0 +1,22 @@
+@use "../../../../variables.scss" as *;
+
+.soloTaskContainer {
+    background-color: $soloTask_Background;
+    min-height: 3vh;
+    width: 92vw;
+    padding: 2vh 1.5vw;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    h3, p {
+        font-weight: $taskTitle_weight;
+        color: $white;
+    }
+}
+
+.soloTaskContainer:hover {
+    cursor: pointer;
+}
