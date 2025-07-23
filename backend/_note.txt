@@ -1,0 +1,25 @@
+
+import express from 'express';
+import cors from 'cors';
+import { readFile } from 'fs';
+
+const app = express();
+app.use(cors());
+app.use(express.json);
+
+let respJson;
+
+
+app.get('api/allTasks', (req, res) => {
+    readFile('./simBd/Tasks.json', 'utf8', (err, json) => {
+        if(err) {
+            res.status(500).send('An error has occurred. Try again later...')
+        }
+
+        respJson = json;
+    })
+
+    res.json({allTasks: respJson});
+})
+
+app.listen(5000, () => console.log('The backend is running on https://localhost:5000'));
