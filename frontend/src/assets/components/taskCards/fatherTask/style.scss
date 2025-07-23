@@ -2,19 +2,63 @@
 
 
 
-.fatherTaskContainer {
+// General Task container
+.fatherTask_Container {
+    border: solid 1px $black;
     min-height: 3vh;
     width: 95vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    
-    h3, p, span {
-        min-width: 145px;
-        max-width: 160px;
+
+    // All text alingments
+    span {
+        flex: 1;
+        text-align: center;
+    }
+
+    .subtask_Name {
+        text-align: left;
+    }
+
+    .subtask_Status {
+        text-align: right;
     }
 }
+
+
+// fatherTask Header  -----
+.taskHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: -webkit-fill-available;
+    padding: 2vh 1.5vw;
+    background-color: $fatherTask-Header_Background;
+    gap: 30px;
+
+    span {
+        flex: 1;
+        text-align: center;
+        font-weight: $taskTitle_weight;
+        color: $black;
+    }
+
+    .fathertask_Name {
+        text-align: left;
+    }
+
+    .fathertask_Progress {
+        text-align: right;
+    }
+}
+
+
+.taskHeader:hover {
+    cursor: pointer;
+}
+
 
 .fatherTask_open {
     border-radius: 7px 7px 10px 10px;
@@ -22,56 +66,41 @@
     .taskHeader {
         border-radius: 7px 7px 0px 0px;
     }
-    
+
 }
+
 
 .fatherTask_close {
     border-radius: 7px;
-    
+
     .taskHeader {
         border-radius: 7px;
     }
 }
 
 
-
-.taskHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: -webkit-fill-available;
-    padding: 2vh 1.5vw;
-    background-color: $fatherTask-Header_Background;
-    
-    h3, p {
-        font-weight: $taskTitle_weight;
-        color: $white;
-    }
-}
-
-.taskHeader:hover {
-    cursor: pointer;
-}
-
-.sonContainer {
+// Container with subtasks -----
+.subtask_Container {
     display: flex;
     flex-direction: column;
     border-radius: 0px 0px 10px 10px;
-    background-color: $gray;
+    background-color: $sonContainer_Background;
     box-sizing: border-box;
-    border: solid 3px $gray;
+    border: solid 3px $sonContainer_Background;
     border-top: none;
     width: 100%;
     gap: 7px;
     padding-top: 8px;
-    
-    
-    div { 
+    border-top: dashed 1px $black;
+
+
+    div {
         display: flex;
-        justify-content: space-between;        
+        justify-content: space-between;
         border-radius: 10px 10px 10px 10px;
         background-color: $fatherTask-subTasks_Background;
         padding: 2vh 1.5vw;
+        gap: 30px;
     }
 
     div:hover {
@@ -82,13 +111,4 @@
         color: $black;
     }
 
-}
-
-.subtask-FinalDate, .task-FinalDate {
-    text-align: center;
-}
-
-.subtask-Status, .task-Progress {
-    text-align: right;
-    min-width: 75px;
 }

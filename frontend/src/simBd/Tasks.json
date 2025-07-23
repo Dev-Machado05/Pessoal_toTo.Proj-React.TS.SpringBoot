@@ -1,0 +1,90 @@
+[
+    {
+        "ID": "1",
+        "name": "teste",
+        "finalDate": "2055-03-10",
+        "completeDate": null,
+        "description": "teste",
+        "complete": false,
+        "fatherVal": false
+    },
+    {
+        "ID": "2",
+        "name": "do something",
+        "finalDate": "2025-06-13",
+        "completeDate": null,
+        "description": "just do something",
+        "complete": false,
+        "fatherVal": true,
+        "son": [
+            {
+                "ID": "11",
+                "sonName": "task teste sla 3651",
+                "finalDate": "2025-05-20",
+                "completeDate": "2025-05-15",
+                "description": "something else",
+                "complete": true
+            },
+            {
+                "ID": "12",
+                "sonName": "task teste sla 3651",
+                "finalDate": "2025-05-21",
+                "completeDate": "2025-05-15",
+                "description": "somewere else",
+                "complete": false
+            },
+            {
+                "ID": "13",
+                "sonName": "task teste sla 3651",
+                "finalDate": "2025-05-22",
+                "completeDate": "2025-05-15",
+                "description": "someone else",
+                "complete": false
+            }
+        ]
+    },
+    {
+        "ID": "3",
+        "name": "teste",
+        "finalDate": "2025-06-10",
+        "completeDate": null,
+        "description": "teste",
+        "complete": true, 
+        "fatherVal": false
+    },
+    {
+        "ID": "4",
+        "name": "do something",
+        "finalDate": "2025-06-13",
+        "completeDate": "2025-06-10",
+        "description": "just do something",
+        "complete": true,
+        "fatherVal": true,
+        "son": [
+            {
+                "ID": "21",
+                "sonName": "task teste sla 3651",
+                "finalDate": "2025-05-20",
+                "completeDate": "2025-05-08",
+                "description": "something else",
+                "complete": true
+            },
+            {
+                "ID": "22",
+                "sonName": "task teste sla 3651",
+                "finalDate": "2025-05-21",
+                "completeDate": "2025-05-09",
+                "description": "somewere else",
+                "complete": true
+            },
+            {
+                "ID": "23",
+                "sonName": "task teste sla 3651",
+                "finalDate": "2025-05-22",
+                "completeDate": "2025-05-10",
+                "description": "someone else",
+                "complete": true
+            }
+        ]
+    }
+]

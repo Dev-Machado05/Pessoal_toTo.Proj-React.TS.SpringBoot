@@ -9,11 +9,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: solid 1px $black;
     
 
     h3, p {
         font-weight: $taskTitle_weight;
-        color: $white;
+        color: $black;
     }
 }
 

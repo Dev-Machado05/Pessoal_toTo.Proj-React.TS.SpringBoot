@@ -5,6 +5,11 @@ import Home from "../pages/home/page";
 import CreateTask from "../pages/createTask/page";
 import RemoveTask from "../pages/remove/page";
 import Complete from "../pages/Completed/page";
+import TaskInfo from "../pages/task_Info/page";
+
+import JsonData from "../simBd/Tasks.json";
+
+
 
 export const routes: RouteObject[] = [
     {
@@ -26,5 +31,13 @@ export const routes: RouteObject[] = [
     {
         path: "/Complete",
         element: <Complete/>
+    },
+    {
+        path: "/task/:id",
+        element: <TaskInfo/>
+    },
+    {
+        path: "/task/:id/:sonId",
+        element: <TaskInfo/>
     },
 ];

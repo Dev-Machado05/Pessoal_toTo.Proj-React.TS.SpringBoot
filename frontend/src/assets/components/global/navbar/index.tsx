@@ -1,8 +1,8 @@
 import "./style.scss";
 
 type navbarProps = {
-    s_page: string;
-    s_state?: string;
+    s_page: "view" | "add" | "delete" | "completed";
+    s_state?: "dinamic" | "fixed";
 };
 
 type navItem = {
@@ -16,7 +16,7 @@ const navItems: navItem[] = [
     {s_content: "Visualizar", s_name: "view", s_className: "viewLink", s_href:"/View"},
     {s_content: "Adicionar", s_name: "add", s_className: "addLink", s_href:"/CreateTask"},
     {s_content: "Remover", s_name: "delete", s_className: "deleteLink", s_href:"/RemoveTask"},
-    {s_content: "Concluida", s_name: "complete", s_className: "completeLink", s_href:"/Complete"}
+    {s_content: "Concluida", s_name: "completed", s_className: "completeLink", s_href:"/Complete"}
 ]
 
 const NavBar = ({s_page, s_state}: navbarProps) => {

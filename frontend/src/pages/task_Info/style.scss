@@ -1,0 +1,56 @@
+// Main Container
+.taskInfo_Container {
+    height: 100%;
+    align-items: center;
+}
+
+// content task Info 
+.taskInfo_content {
+    height: auto;
+    width: 92.24vw;
+    margin: 3.51vh 1.6vw 3.51vh 1.6vw; 
+    padding: 2.08vw;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    border-radius: 10px;
+    background-color: rgba(233, 234, 255, 0.9);
+}
+
+// Task header
+.taskInfo-Header_container {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.taskInfo-Header_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+// Task Status
+.taskStatus_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+// Task description
+.TaksInfo-Description_Container {
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    
+    p {
+        height: auto;
+        background-color: rgba(255, 228, 196, 0.7);
+        border: solid 2px rgba(128, 128, 128, 0.5);
+        border-radius: 5px;
+        padding: 8px;
+    }
+}

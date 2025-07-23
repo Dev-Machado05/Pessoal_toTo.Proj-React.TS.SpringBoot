@@ -4,11 +4,14 @@ $white: #FFFFFF;
 $gray: #B4BEC9;
 
 // Background
-$NavBar_Background: #002333;
-$soloTask_Background: #159A9C;
-$fatherTask-Header_Background: #159A9C;
+$NavBar_Background: #2B0D42;
+$soloTask_Background: rgba(233, 234, 255, 0.8);
+$fatherTask-Header_Background: rgba(233, 234, 255, 0.8);
 $fatherTask-subTasks_Background: #DEEFE7;
-$disabledInput_Background: #dad3d3a1;
+$disabledInput_Background: #dad3d3cc;
+$buttom_Background: #9F4DDD;
+$createTaskForm_Background: rgba(233, 234, 255, 0.9);
+$sonContainer_Background: rgba(228, 225, 225, 0.8);
 
 // Font
 $NavBar_Font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -18,3 +21,26 @@ $taskTitle_weight: 700;
 
 // Sizes
 $Desktop_Width: 1024px;
+
+
+// import fonts
+@font-face {
+    font-family: 'Inter';
+    src: url(./assets/fonts/Inter/static/Inter_28pt-Regular.ttf);
+}
+
+
+// functions
+
+
+// @mixin textBorder($width, $color) {
+
+//     @supports (-webkit-text-stroke: #{$width} #{$color}) {
+//         // ...
+//     }
+
+//     @supports not (-webkit-text-stroke: #{$width} #{$color}) {
+//         // ... 
+//     }
+// }
+    
