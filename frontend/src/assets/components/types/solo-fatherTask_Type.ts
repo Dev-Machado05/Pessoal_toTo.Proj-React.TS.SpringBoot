@@ -1,17 +1,11 @@
-type sonTask = {
-  ID: string;
-  sonName: string;
-  finalDate: string;
-  completeDate: string;
-  description: string;
-  complete: boolean;
-};
+import sonTask from "./sonTask_type";
 
 type task_Type = {
   ID: string;
   name: string;
   finalDate: string;
-  completeDate: string;
+  completeDate: string | null;
+  late: boolean | null;
   description: string;
   complete: boolean;
   fatherVal: boolean;

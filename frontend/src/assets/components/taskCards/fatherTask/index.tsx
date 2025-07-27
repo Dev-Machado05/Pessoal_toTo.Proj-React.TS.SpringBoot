@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./style.scss";
 
 type sonItems = {
@@ -30,13 +32,6 @@ const progress = (son: sonItems[]) => {
   return `${result}%`;
 };
 
-const sonTask_redirect = (fatherid: string, sonId: string) => {
-  window.location.replace(`/task/${fatherid}/${sonId}`);
-};
-
-const fatherTask_redirect = (id: string) => {
-  window.location.replace(`/task/${id}`);
-};
 
 const FatherTask = ({
   ID: fatherId,
@@ -49,6 +44,8 @@ const FatherTask = ({
 }: fatherTaskProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navigate = useNavigate();
+
   const changeTaskState = () => {
     setIsOpen(!isOpen);
   };
@@ -57,7 +54,7 @@ const FatherTask = ({
     <section
       onClick={changeTaskState}
       onDoubleClick={() => {
-        fatherTask_redirect(fatherId);
+        navigate(`/task/${fatherId}`);
       }}
       className={`fatherTask_Container ${
         isOpen ? "fatherTask_open" : "fatherTask_close"
@@ -80,7 +77,7 @@ const FatherTask = ({
             <div
               key={sonName}
               onClick={() => {
-                sonTask_redirect(fatherId, sonId);
+                navigate(`/task/${fatherId}/${sonId}`);
               }}
             >
               <span className="subtask_Name">{sonName}</span>

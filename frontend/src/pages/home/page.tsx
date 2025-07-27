@@ -1,11 +1,13 @@
+import { useEffect, useState } from "react";
+
+import "./style.scss";
+
 import NavBar from "../../assets/components/global/navbar";
 import viewObj from "../../simBd/viewResp";
 import FatherTask from "../../assets/components/taskCards/fatherTask";
 import SoloTask from "../../assets/components/taskCards/soloTask";
-import "./style.scss";
-import { useEffect, useState } from "react";
 
-import task_Type from "../../assets/components/types/task_Type";
+import task_Type from "../../assets/components/types/solo-fatherTask_Type";
 
 const Home = () => {
 

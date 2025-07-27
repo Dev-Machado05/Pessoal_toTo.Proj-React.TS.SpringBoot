@@ -1,3 +1,5 @@
+@use "../../variables.scss" as *;
+
 // Main Container
 .taskInfo_Container {
     height: 100%;
@@ -5,12 +7,12 @@
 }
 
 // content task Info 
-.taskInfo_content {
+.taskInfo-Form_content {
     height: auto;
     width: 92.24vw;
-    margin: 3.51vh 1.6vw 3.51vh 1.6vw; 
+    margin: 3.51vh 1.6vw 3.51vh 1.6vw;
     padding: 2.08vw;
-    
+
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -22,7 +24,8 @@
 // Task header
 .taskInfo-Header_container {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
+    align-items: center;
 }
 
 .taskInfo-Header_content {
@@ -31,26 +34,130 @@
     gap: 20px;
 }
 
+.checkboxEdit_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input[type=checkbox] {
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        background-color: $white;
+        outline: 1px solid $black;
+        appearance: none;
+    }
+
+    input[type=checkbox]:checked {
+        background-image: url(../../assets/img/check.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgb(166, 127, 230);
+    }
+}
+
 // Task Status
 .taskStatus_container {
+    gap: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: end;
+
+    button {
+        padding: 13px 14px;
+        background-color: $button_Background;
+        border-radius: 5px;
+        border: none;
+    }
+}
+
+
+// name container
+.TaskInfo-Name_Container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input {
+        border-radius: 5px;
+        border: solid $black 1.5px;
+        padding: 5px;
+    }
+}
+
+// ID container
+// .TaskId_Text {}
+
+// final Date container
+.TaskInfo-FinalDate_Container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .finalDate_container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .completeDate_Container {
+        display: flex;
+        align-items: center;
+        gap: 10px
+    }
+
+    input {
+        border-radius: 5px;
+        border: solid $black 1.5px;
+        padding: 5px;
+    }
+
+    p>span {
+        margin-left: 5px;
+    }
 }
 
 
 // Task description
 .TaksInfo-Description_Container {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     gap: 10px;
     height: auto;
-    
+
     p {
         height: auto;
         background-color: rgba(255, 228, 196, 0.7);
         border: solid 2px rgba(128, 128, 128, 0.5);
         border-radius: 5px;
         padding: 8px;
+    }
+}
+
+.taskDescriptionSolo_Text {
+    padding: 5px;
+    border-radius: 5px;
+    border: solid $black 1.5px;
+    max-width: 99%;
+    max-height: 20vh;
+}
+
+
+.taksAction_container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+
+    button {
+        width: 100%;
+        padding: 10px;
+
+        background-color: $button_Background;
+        border-radius: 10px;
+
+        font-size: 1.1rem;
+        color: $white;
     }
 }

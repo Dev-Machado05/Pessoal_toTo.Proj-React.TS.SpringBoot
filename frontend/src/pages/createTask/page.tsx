@@ -50,7 +50,7 @@ const CreateTask = () => {
           >
             <section className="taskType_container">
               <div>
-                <span>Tarefa Pai:</span>{" "}
+                <span>Tarefa Pai:</span>
                 <input
                   type="checkbox"
                   name=""
@@ -59,7 +59,7 @@ const CreateTask = () => {
                 />
               </div>
               <div>
-                <span>Tarefa Filha:</span>{" "}
+                <span>Tarefa Filha:</span>
                 <input
                   type="checkbox"
                   name=""
@@ -69,7 +69,7 @@ const CreateTask = () => {
               </div>
             </section>
             <div>
-              <span>Pai:</span>{" "}
+              <span>Pai:</span>
               <input
                 type="text"
                 name=""
@@ -79,11 +79,11 @@ const CreateTask = () => {
               />
             </div>
             <div>
-              <span>Nome:</span>{" "}
+              <span>Nome:</span>
               <input type="text" name="" id="name_input" required />
             </div>
             <div>
-              <span>Descrição:</span>{" "}
+              <span>Descrição:</span>
               <textarea
                 name=""
                 id=""
@@ -92,7 +92,7 @@ const CreateTask = () => {
               ></textarea>
             </div>
             <div>
-              <span>Data Final:</span>{" "}
+              <span>Data Final:</span>
               <input type="date" name="" id="finalDate_input" required />
             </div>
 
